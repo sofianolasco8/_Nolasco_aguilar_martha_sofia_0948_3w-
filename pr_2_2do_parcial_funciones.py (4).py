@@ -1,18 +1,16 @@
 print(" ")
-print("nolasco_aguilar_martha_sofia_0948_3w ")
+print("nolasco_aguilar_martha_sofia_0948_3w")
 print(" ")
+def es_vocal(caracter):#se crea una lista 
 
-def calcular_factura(cantidad_sin, t_iva=21):#crea la funcion
-    iva = cantidad_sin * (t_iva / 100)  # Calcula el IVA
-    return cantidad_sin + iva  # Devuelve el total
+    vocales = "aeiouAEIOU"  #  vocales  minúsculas y mayúsculas
+    return caracter in vocales  # imprime True si es vocal y False si no 
 
-# Solicita la cantidad sin IVA
-cantidad = float(input(" ingrese laCantidad sin IVA: "))  # indica al usuario quie ingrese la cantidad sin iva
+# indica al usuario ingresar  una letra
+letra = input("Ingresa una letra ")
 
-# Pide el  IVA o usa el 21% 
-porcentaje = input("IVA  ")
-t = float(porcentaje) if porcentaje else 21  # Usa 21 si no se proporciona
-
-# Calcula y muestra el total
-total = calcular_factura(cantidad, t)
-print("El total de la factura es:", round(total, 2))  # Muestra el total
+# Verificar si es una vocal 
+if es_vocal(letra):
+    print(True)#indica que  es una vocal
+else:
+    print(False)#IDICA QUE NO ES UNA VOCAL
